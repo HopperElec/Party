@@ -1,0 +1,24 @@
+name: Party
+version: ${project.version}
+main: uk.co.hopperelec.mc.party.Main
+api-version: 1.16
+prefix: Party
+load: STARTUP
+authors: [HopperElecYT]
+description: Public Party API used for my other plugins
+website: hopperelec.co.uk
+
+commands:
+  party:
+    description: Core command for the plugin
+
+permissions:
+  hopperelec.party.*:
+    description: Allows use of all 3 permission-based commands
+    children:
+      hopperelec.party.inspect: true
+      hopperelec.party.invite: true
+  hopperelec.party.inspect:
+    description: Allows use of the /party inspect command
+  hopperelec.party.invite:
+    description: Allows use of the invite and uninvite commands

@@ -1,0 +1,24 @@
+messagePrefix: §4[§cParty§4]§r§7
+includeSpace: true
+
+messages:
+  invalidPermission: You do not have permission to perform this command!
+  inviteInviteeAlreadyInParty: $invitee is already in the party!
+  inviteInviteeAlreadyInvited: $invitee has already been invired to the party!
+  inviteCantFindPlayer: Can't find a player by username '$username'!
+  inviteSuccessfulInviteeMessage: $inviter has invited you to his party! Use §8/party join $inviter§r to accept!
+  inviteSuccessfulPartyMessage: $inviter has invited $invitee to the party!
+  uninviteUninviteeAlreadyInParty: $uninvitee is already in the party!
+  uninviteUninviteeNotInvited: $uninvitee hasn't already been invited to the party!
+  uninviteCantFindPlayer: Can't find a player by username '$username'!
+  uninviteSuccessfulUninviteeMessage: $uninviter has removed the invite to you from their party!
+  uninviteSuccessfulPartyMessage: $uninviter has removed the party invite to $uninvitee from the party!
+  joinSuccessfulPartyMessage: $joiner is joining the party!
+  joinSuccessfulJoinerMessage: Accepting invite!
+  joinSelfMessage: You can't invite yourself, silly!
+  joinNoInvite: Nobody in this party has invited you!
+  joinCantFindPlayer: Can't find a player by username '$username'!
+  quitAlone: You're in a party by yourself so are unable to leave!
+  quitSuccessfulPartyMessage: $quitter has quit the party!
+  quitSuccessfulQuitterMessage: Leaving the party!
+  inspectCantFindPlayer: Can't find a player by username '$username'!
