@@ -94,10 +94,7 @@ public class HopperParty extends JavaPlugin implements Iterable<Party> {
                 } else author.sendMessage(pre+mes.get("quitAlone"));
 
             } else if (args[0].equalsIgnoreCase("list")) {
-                final StringBuilder members = new StringBuilder(author.getDisplayName());
-                for (Player member : getPartyFromPlayer(author)) {
-                    if (member != author) members.append(", ").append(member.getDisplayName());}
-                author.sendMessage(pre+"Players in your current party: " + members);
+                author.sendMessage(pre+"Players in your current party: "+getPartyFromPlayer(author));
 
             } else if (args[0].equalsIgnoreCase("inspect")) {
                 if (author.hasPermission("hopperparty.inspect")) {
@@ -111,10 +108,7 @@ public class HopperParty extends JavaPlugin implements Iterable<Party> {
                                 invitedParties.append(", ").append(invitedParty.players.get(0));
                             author.sendMessage(pre+"Player invited to party of: "+invitedParties);
 
-                            final StringBuilder members = new StringBuilder(player.getDisplayName());
-                            for (Player member : party.players) {
-                                if (member != player) members.append(", ").append(member.getDisplayName());}
-                            author.sendMessage(pre+"Party members: "+members);
+                            author.sendMessage(pre+"Party members: "+party);
 
                             if (party.invitees.size() != 0) {
                                 final StringBuilder invitees = new StringBuilder(party.invitees.get(0).getDisplayName());

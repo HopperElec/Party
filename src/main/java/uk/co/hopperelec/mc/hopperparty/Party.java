@@ -20,6 +20,14 @@ public class Party implements Iterable<Player> {
         return players.iterator();
     }
 
+    @Override
+    public String toString() {
+        final StringBuilder members = new StringBuilder(players.get(0).getDisplayName());
+        for (Player member : players) {
+            if (member != players.get(0)) members.append(", ").append(member.getDisplayName());}
+        return members.toString();
+    }
+
     public void invite(Player inviter, Player invitee) {
         if (contains(invitee)) inviter.sendMessage(main.pre+ main.mes.get("inviteInviteeAlreadyInParty").replace("$invitee",invitee.getDisplayName()));
         else if (invitees.contains(invitee)) inviter.sendMessage(main.pre+ main.mes.get("inviteInviteeAlreadyInvited").replace("$invitee",invitee.getDisplayName()));
