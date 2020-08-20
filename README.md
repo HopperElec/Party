@@ -5,7 +5,8 @@ In the <repositories> tag in the pom.xml, add this code:
 <repository>
   <id>party</id>
   <url>https://github.com/HopperElec/Party</url>
-</repository>```
+</repository>
+  ```
 
 And in the <dependencies> tag, add this code:
 ```xml
@@ -13,17 +14,20 @@ And in the <dependencies> tag, add this code:
   <groupId>uk.co.hopperelec.mc</groupId>
   <artifactId>party</artifactId>
   <version>1.0.3</version>
-</dependency>```
+</dependency>
+  ```
 
 Once you've added it through Maven and refreshed it, you then need to add it as a dependency in the plugin.yml. To do this, simply add this:
 ```yaml
-depend: [HopperParty]```
+depend: [HopperParty]
+```
 
 Now you should be good to go!
 
 To access the plugin, use this code:
 ```java
-Bukkit.getPluginManager().getPlugin("HopperParty");```
+Bukkit.getPluginManager().getPlugin("HopperParty");
+```
 
 And cast it to (HopperParty). I recommend, as a safety precaution, to makes sure the plugin isn't null, though. So you should end up with code looking like this:
 ```java
@@ -32,6 +36,7 @@ if (partyPlugin == null) {
   System.out.println("Failed to get party plugin class! Cancelling start-up of the plugin!");
   setEnabled(false); return;
 }
-HopperParty partyClass = (HopperParty) partyPlugin;```
+HopperParty partyClass = (HopperParty) partyPlugin;
+```
 
 From there, your IDE should be able to guide you after typing partyClass then a dot somewhere in your code! Have fun :D
