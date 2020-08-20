@@ -1,4 +1,4 @@
-package uk.co.hopperelec.mc.party;
+package uk.co.hopperelec.mc.hopperparty;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -6,8 +6,9 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
 public class Events implements Listener {
-    Main main;
-    public Events(Main mainClass) {main = mainClass;}
+    HopperParty main;
+    public Events(HopperParty mainClass) {
+        main = mainClass;}
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {

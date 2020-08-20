@@ -1,4 +1,4 @@
-package uk.co.hopperelec.mc.party;
+package uk.co.hopperelec.mc.hopperparty;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -10,7 +10,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.*;
 
-public class Main extends JavaPlugin implements Iterable<Party> {
+public class HopperParty extends JavaPlugin implements Iterable<Party> {
     public String pre;
     public final Map<String,String> mes = new HashMap<>();
     public final List<Party> parties = new ArrayList<>();
@@ -69,7 +69,7 @@ public class Main extends JavaPlugin implements Iterable<Party> {
                 } else author.sendMessage(pre+"Format: /party join (inviter)");
 
             } else if (args[0].equalsIgnoreCase("invite")) {
-                if (author.hasPermission("hopperelec.party.invite")) {
+                if (author.hasPermission("hopperparty.invite")) {
                     if (args.length >= 2) {
                         final Player invitee = Bukkit.getPlayerExact(args[1]);
                         if (invitee != null) getPartyFromPlayer(author).invite(author, invitee);
@@ -78,7 +78,7 @@ public class Main extends JavaPlugin implements Iterable<Party> {
                 } else author.sendMessage(pre+mes.get("invalidPermission"));
 
             } else if (args[0].equalsIgnoreCase("uninvite")) {
-                if (author.hasPermission("hopperelec.party.invite")) {
+                if (author.hasPermission("hopperparty.invite")) {
                     if (args.length >= 2) {
                         final Player invitee = Bukkit.getPlayerExact(args[1]);
                         if (invitee != null) getPartyFromPlayer(author).uninvite(author,invitee);
@@ -100,7 +100,7 @@ public class Main extends JavaPlugin implements Iterable<Party> {
                 author.sendMessage(pre+"Players in your current party: " + members);
 
             } else if (args[0].equalsIgnoreCase("inspect")) {
-                if (author.hasPermission("hopperelec.party.inspect")) {
+                if (author.hasPermission("hopperparty.inspect")) {
                     if (args.length >= 2) {
                         final Player player = Bukkit.getPlayerExact(args[1]);
                         if (player != null) {

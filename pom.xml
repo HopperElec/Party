@@ -6,7 +6,7 @@
 
     <groupId>uk.co.hopperelec.mc</groupId>
     <artifactId>party</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.2</version>
     <packaging>jar</packaging>
 
     <name>Main</name>
@@ -58,4 +58,12 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub HopperElec Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/HopperElec/Party</url>
+        </repository>
+    </distributionManagement>
 </project>

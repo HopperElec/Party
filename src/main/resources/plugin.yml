@@ -1,6 +1,6 @@
-name: Party
+name: HopperParty
 version: ${project.version}
-main: uk.co.hopperelec.mc.party.Main
+main: uk.co.hopperelec.mc.hopperparty.HopperParty
 api-version: 1.16
 prefix: Party
 load: STARTUP
@@ -13,12 +13,12 @@ commands:
     description: Core command for the plugin
 
 permissions:
-  hopperelec.party.*:
+  hopperparty.*:
     description: Allows use of all 3 permission-based commands
     children:
-      hopperelec.party.inspect: true
-      hopperelec.party.invite: true
-  hopperelec.party.inspect:
+      hopperparty.inspect: true
+      hopperparty.invite: true
+  hopperparty.inspect:
     description: Allows use of the /party inspect command
-  hopperelec.party.invite:
+  hopperparty.invite:
     description: Allows use of the invite and uninvite commands
